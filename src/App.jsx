@@ -6,6 +6,7 @@ import HomePage from './components/pages/HomePage';
 import ComparisonPage from './components/pages/ComparisonPage';
 import MapPage from './components/pages/MapPage';
 import RankingPage from './components/pages/RankingPage';
+import ContactPage from './components/pages/ContactPage';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/carte" element={<MapPage />} />
           <Route path="/classement" element={<RankingPage />} />
           <Route path="/comparer" element={<ComparisonPage/>} />
+          <Route path="/contact" element={<ContactPage/>} />
         </Routes>
         <Footer />
       </div>

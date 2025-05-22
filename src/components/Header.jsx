@@ -59,12 +59,19 @@ const Header = () => {
           <a href="#" className="relative text-gray-600 hover:text-purple-600 transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-purple-600 after:transition-all after:duration-300">
             À propos
           </a>
-          <a href="#" className="relative text-gray-600 hover:text-purple-600 transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-purple-600 after:transition-all after:duration-300">
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) => 
+              isActive 
+                ? "text-purple-700 font-medium" 
+                : "relative text-gray-600 hover:text-purple-600 transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-purple-600 after:transition-all after:duration-300"
+            }
+          >
             Contact
-          </a>
+          </NavLink>
         </nav>
         
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <div className="relative inline-block text-left">
             <button type="button" className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
               <span>FR</span>
@@ -73,6 +80,12 @@ const Header = () => {
               </svg>
             </button>
           </div>
+
+          <img
+              src="/images/africa_map.svg"
+              alt="Mon logo"
+              className="w-10 h-10 animate-pulse transition duration-1000 hover:brightness-125 hover:grayscale-0"
+          />
           
           <button 
             className="md:hidden ml-4 text-gray-600"
